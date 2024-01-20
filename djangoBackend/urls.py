@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^student/([0-9]+)$',views.studentApi),
     re_path(r'^task$',views.taskApi),
     re_path(r'^task/([a-zA-Z0-9]+)$',views.taskApi),
+    path('home',views.Home_view),
     path('admin/', admin.site.urls),
 ]
