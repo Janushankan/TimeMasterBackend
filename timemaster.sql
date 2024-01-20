@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2024 at 12:12 PM
+-- Generation Time: Jan 20, 2024 at 03:15 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -268,17 +268,19 @@ CREATE TABLE `timemaster_task` (
 --
 
 INSERT INTO `timemaster_task` (`id`, `taskName`, `startDate`, `startTime`, `endDate`, `endTime`, `category`, `status`, `description`) VALUES
-(14, 'Task 400', '2023-12-30', '13:22:00.000000', '2023-12-31', '13:22:00.000000', 'Personal', 'RUNNING', 'Gym time.......'),
-(15, 'Task A', '2023-12-31', '11:43:00.000000', '2023-12-31', '03:43:00.000000', 'Work', 'RUNNING', 'Planning'),
-(16, 'Task B', '2023-12-31', '23:44:00.000000', '2024-01-04', '16:44:00.000000', 'Personal', 'FAILED', 'Studying'),
+(16, 'Task B', '2024-01-17', '23:44:00.000000', '2024-02-14', '16:44:00.000000', 'Personal', 'COMPLETED', 'Studying'),
 (17, 'Task C', '2024-01-06', '11:51:00.000000', '2024-01-06', '00:45:00.000000', 'Work', 'RUNNING', 'Cooking'),
-(18, 'Task D', '2024-01-02', '23:46:00.000000', '2024-01-02', '23:52:00.000000', 'Entertainment', 'FAILED', 'Movie'),
-(19, 'Task E', '2023-12-31', '11:47:00.000000', '2023-12-31', '23:47:00.000000', 'Miscellaneous', 'FAILED', 'Sleep'),
-(20, 'Task F', '2023-12-26', '00:08:00.000000', '2024-01-06', '12:08:00.000000', 'Personal', 'COMPLETED', 'Meeting'),
-(21, 'Task F', '2023-12-31', '12:22:00.000000', '2024-01-05', '12:22:00.000000', 'Health', 'COMPLETED', 'Singing'),
-(22, 'Task G', '2023-12-31', '00:55:00.000000', '2023-12-31', '12:55:00.000000', 'Entertainment', 'RUNNING', 'Dancing'),
+(18, 'Task D', '2024-01-02', '23:46:00.000000', '2024-01-02', '23:52:00.000000', 'Entertainment', 'RUNNING', 'Movie'),
+(19, 'Task E', '2023-12-31', '11:47:00.000000', '2023-12-31', '23:47:00.000000', 'Miscellaneous', 'RUNNING', 'Sleep'),
+(20, 'Task F', '2023-12-26', '00:08:00.000000', '2024-01-06', '12:08:00.000000', 'Personal', 'RUNNING', 'Meeting'),
+(21, 'Task F', '2023-12-31', '12:22:00.000000', '2024-01-05', '12:22:00.000000', 'Health', 'FAILED', 'Singing'),
+(22, 'Task G', '2023-12-31', '00:55:00.000000', '2023-12-31', '12:55:00.000000', 'Entertainment', 'FAILED', 'Dancing'),
 (23, 'Task 100', '2024-01-26', '23:17:00.000000', '2024-02-03', '23:17:00.000000', 'Personal', 'COMPLETED', 'fdgfg'),
-(24, 'Task H', '2024-01-04', '16:14:00.000000', '2024-01-05', '16:14:00.000000', 'Health', 'RUNNING', 'Project work...');
+(24, 'Task H', '2024-01-04', '16:14:00.000000', '2024-01-05', '16:14:00.000000', 'Health', 'COMPLETED', 'Project work...'),
+(25, 'Task 1000', '2024-01-09', '18:18:00.000000', '2024-01-20', '18:18:00.000000', 'Personal', 'FAILED', 'Hifhadsf hjdf aldfkh dfkjh adfkh adff'),
+(27, 'Task R', '2024-02-05', '19:00:00.000000', '2024-02-29', '19:01:00.000000', 'Entertainment', 'RUNNING', 'hhj alkjdfhhasd'),
+(28, 'Task K', '2024-02-12', '19:01:00.000000', '2024-01-30', '19:02:00.000000', 'Entertainment', 'COMPLETED', 'jhfjhgjkfsdg'),
+(29, 'Task Z', '2024-03-14', '19:16:00.000000', '2024-03-31', '19:16:00.000000', 'Work', 'FAILED', 'Hiji  aksasd');
 
 --
 -- Indexes for dumped tables
@@ -437,7 +439,7 @@ ALTER TABLE `timemaster_student`
 -- AUTO_INCREMENT for table `timemaster_task`
 --
 ALTER TABLE `timemaster_task`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- Constraints for dumped tables
