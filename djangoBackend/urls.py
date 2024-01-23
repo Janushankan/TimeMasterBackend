@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 from django.urls import re_path as url
 from TimeMaster import views
 
@@ -27,4 +27,5 @@ urlpatterns = [
     re_path(r'^task/([a-zA-Z0-9]+)$',views.taskApi),
     path('home',views.Home_view),
     path('admin/', admin.site.urls),
+    path('', include('accounts.urls')),
 ]
