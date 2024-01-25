@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 from django.urls import re_path as url
 from TimeMaster import views
+import knox.views
+# from  .views import RegisterAPI,LoginAPI
+from knox import views as knox_views
 
 urlpatterns = [
     url(r'^student$',views.studentApi),
@@ -27,5 +30,10 @@ urlpatterns = [
     re_path(r'^task/([a-zA-Z0-9]+)$',views.taskApi),
     path('home',views.Home_view),
     path('admin/', admin.site.urls),
-    path('', include('accounts.urls')),
+    # path('', include('accounts.urls')),
+    path('api/register/', views.RegisterAPI.as_view(), name='register'),
+    path('api/login/', views.LoginAPI.as_view(), name='login'),
+    path('api/logout/',knox_views.LogoutView.as_view(), name='logout'),
+    path('api/logoutall/',knox_views.LogoutAllView.as_view(), name='logoutall'),
+    path('check/', views.check_user, name='check token'),
 ]
