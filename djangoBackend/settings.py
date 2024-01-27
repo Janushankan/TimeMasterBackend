@@ -138,3 +138,7 @@ REST_FRAMEWORK={
         'knox.auth.TokenAuthentication',
     ],
 }
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
