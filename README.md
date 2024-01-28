@@ -1,4 +1,5 @@
 pip install django
+
 python manage.py runserver
 pip install pymysql
 pip install pymysql --upgrade
