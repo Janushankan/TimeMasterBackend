@@ -27,17 +27,19 @@ class userViewSet(APIView):
             if 'oldpassword' in request.data:
                 oldpassword = request.data.get('oldpassword')
                 newpassword = request.data.get('password')
+                confirm_password = request.data.get('confirmPassword')
                 
                 passs = {"password" : newpassword}
                
                 
                 # Check if the provided old password matches the existing user password
                 if user.check_password(oldpassword):
-                    user.set_password(newpassword)
-                    user.save()
-                    return Response({"message": "Password updated successfully"}, status=status.HTTP_200_OK)
-                    
-                        
+                    if newpassword == confirm_password:
+                        user.set_password(newpassword)
+                        user.save()
+                        return Response({"message": "Password updated successfully"}, status=status.HTTP_200_OK)
+                    else:
+                        return Response({"error": "New password and confirm password do not match"}, status=status.HTTP_400_BAD_REQUEST)  
                 else:
                     return Response({"error": "Incorrect old password"}, status=status.HTTP_400_BAD_REQUEST)
             else:
