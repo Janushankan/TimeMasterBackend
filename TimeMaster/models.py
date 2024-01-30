@@ -15,6 +15,7 @@ class Task(models.Model):
     category = models.CharField(max_length = 255)
     status = models.CharField(max_length = 255)
     description = models.TextField()
+    color = models.CharField(max_length=200, null=True)
     class Task(models.Model):
         STATUS_CHOICES = [
         ('completed', 'Completed'),
